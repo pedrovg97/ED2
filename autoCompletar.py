@@ -1,14 +1,18 @@
 def searchWordsStarting(root, prefix):
-    results = []
     if root is None:
-        return results
-        
-    if root.key.startswith(prefix):
-        results.append(root.key)
-        
-    if prefix < root.key:
-        results.extend(searchWordsStarting(root.left, prefix))
-    else:
-        results.extend(searchWordsStarting(root.right, prefix))
-        
+        return []
+
+    results = []
+
+    # Verificar se o prefixo é menor que o nó atual para otimizar a busca
+    if prefix <= root.key:
+        if root.key.startswith(prefix):
+            results = [root.key]
+
+        left_results = searchWordsStarting(root.left, prefix)
+        results = results + left_results
+
+    right_results = searchWordsStarting(root.right, prefix)
+    results = results + right_results
+
     return results
