@@ -45,8 +45,12 @@ root = None
 for word in unique_words:
     root = avl_tree.insert(root, word)
 
+#imprimir corpus
+#for idx, preprocessed_text in enumerate(preprocessed_corpus):
+#    print(f"Texto {idx+1}: {preprocessed_text}")
+
 #imprimir arvore
-avl_tree.printTree(root)
+#vl_tree.printTree(root)
 
 prefixo = input("Digite o prifixo a ser pesquisado: ")
 
@@ -56,7 +60,5 @@ print(f"Palavras comecando com '{prefixo}':")
 for word in prefixos:
     print(word)
 
-#imprimir corpus
-#for idx, preprocessed_text in enumerate(preprocessed_corpus):
-#    print(f"Texto {idx+1}: {preprocessed_text}")
+
 
