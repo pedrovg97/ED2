@@ -2,6 +2,7 @@ import nltk
 from nltk.corpus import stopwords
 from nltk.tokenize import word_tokenize
 from AVL import AVLTree, Node 
+from autoCompletar import searchWordsStarting
 import string
 
 nltk.download('punkt')
@@ -45,11 +46,11 @@ for word in unique_words:
     root = avl_tree.insert(root, word)
 
 #imprimir arvore
-#avl_tree.printTree(root)
+avl_tree.printTree(root)
 
 prefixo = input("Digite o prifixo a ser pesquisado: ")
 
-prefixos = avl_tree.searchWordsStarting(root, prefixo)
+prefixos = searchWordsStarting(root, prefixo)
 
 print(f"Palavras comecando com '{prefixo}':")
 for word in prefixos:
@@ -58,3 +59,4 @@ for word in prefixos:
 #imprimir corpus
 #for idx, preprocessed_text in enumerate(preprocessed_corpus):
 #    print(f"Texto {idx+1}: {preprocessed_text}")
+

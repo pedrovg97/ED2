@@ -69,17 +69,8 @@ class AVLTree:
         
         return root
     
-    def searchWordsStarting(self, root, prefix):
-        results = []
-        if root is None:
-            return results
-        
-        if root.key.startswith(prefix):
-            results.append(root.key)
-        
-        if prefix < root.key:
-            results.extend(self.searchWordsStarting(root.left, prefix))
-        else:
-            results.extend(self.searchWordsStarting(root.right, prefix))
-        
-        return results
+    def printTree(self, root, level=0, prefix="Root: "):
+        if root is not None:
+            print("  " * level + prefix + str(root.key))
+            self.printTree(root.left, level + 1, "L -- ")
+            self.printTree(root.right, level + 1, "R -- ")
