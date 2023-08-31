@@ -69,6 +69,14 @@ class AVLTree:
         
         return root
     
+    def search(self, root, key):
+        if root is None or root.key == key:
+            return root
+        
+        if key < root.key:
+            return self.search(root.left, key)
+        return self.search(root.right, key)
+    
     def printTree(self, root, level=0, prefix="Root: "):
         if root is not None:
             print("  " * level + prefix + str(root.key))
