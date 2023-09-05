@@ -7,4 +7,4 @@ Projetos desenvolvidos na disciplina:
 
 -     Auto completar palavras
 - Dupla: Pedro Carvalho Bento e Erick César Felipe de Lima
-    Link do vídeo: https://www.loom.com/share/1c39932a3fe74be89dbadf7eda4c8575?sid=1c751873-838f-4343-a5a8-df41f630e942
+- Link do vídeo: https://www.loom.com/share/1c39932a3fe74be89dbadf7eda4c8575?sid=1c751873-838f-4343-a5a8-df41f630e942
