@@ -1,0 +1,28 @@
+Analise de desempenho:
+__init__ (Inicialização da Classe Inventory):
+
+Complexidade: O(n), onde n é o número de linhas no arquivo CSV. Isso ocorre devido à leitura do arquivo e à criação das listas e conjuntos.
+get_laptop_from_id:
+
+Complexidade: O(n), onde n é o número de laptops. Isso ocorre devido à necessidade de percorrer toda a lista de laptops para encontrar um ID específico.
+get_laptop_from_id_fast:
+
+Complexidade: O(1) em média. A pesquisa em um dicionário tem complexidade de tempo médio constante, embora possa haver casos raros de colisões.
+check_promotion_dollars:
+
+Complexidade: O(n^2), onde n é o número de laptops. Isso ocorre devido aos loops aninhados que verificam todas as combinações possíveis de preços.
+check_promotion_dollars_fast:
+
+Complexidade: O(n), onde n é o número de preços únicos no conjunto self.prices. Isso ocorre porque a pesquisa em um conjunto tem complexidade de tempo constante em média.
+find_laptop_with_price:
+
+Complexidade: O(log n), onde n é o número de laptops ordenados por preço. Isso ocorre devido à pesquisa binária eficiente.
+find_first_laptop_more_expensive:
+
+Complexidade: O(log n), onde n é o número de laptops ordenados por preço. Isso ocorre devido à pesquisa binária eficiente.
+find_laptops_in_price_range:
+
+Complexidade: O(n), onde n é o número de laptops. Isso ocorre porque todos os laptops na faixa de preço especificada precisam ser verificados.
+find_cheapest_laptop_with_specifications:
+
+Complexidade: O(n), onde n é o número de laptops. Isso ocorre porque todos os laptops precisam ser verificados quanto às especificações antes de encontrar o mais barato.
